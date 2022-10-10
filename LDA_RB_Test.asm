@@ -1,0 +1,31 @@
+; Código para verificação de Instrução
+Loop:
+	LDI RB, 0
+	LDA RB
+	CMP ACC, RB
+	JPZ VAL1
+	JPI ERRO
+VAL1:
+	LDI RB, 9
+	LDA RB
+	CMP ACC, RB
+	JPZ VAL2
+	JPI ERRO
+VAL2:
+	LDI RB, 0xB
+	LDA RB
+	CMP ACC, RB
+	JPZ VAL3
+	JPI ERRO
+VAL3:
+	LDI RB, 0xF
+	LDA RB
+	CMP ACC, RB
+	JPZ END
+	OUTA 1 ; Sinaliza Erro
+	JPI ERRO
+END:
+	JPI Loop
+ERRO:
+	JPI ERRO
+	

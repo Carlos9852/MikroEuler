@@ -1,0 +1,23 @@
+; Código para verificação de Instrução
+Loop:
+	LDI ACC, 0
+	OUTA ACC
+	ADD ACC,0 ; Nop
+	ADD ACC,0
+	ADD ACC,0
+	LDI ACC,2
+	OUTA ACC
+	ADD ACC,0
+	ADD ACC,0
+	ADD ACC,0
+	LDI ACC,6
+	OUTA ACC
+	ADD ACC,0
+	ADD ACC,0
+	ADD ACC,0
+	LDI ACC,0xC
+	OUTA ACC
+	ADD ACC,0
+	ADD ACC,0
+	JPI Loop
+	
